@@ -181,7 +181,6 @@ class GameActivity : AppCompatActivity(), CardStackListener {
 
 
             if (gameState > gameLimit) {
-                //@TODO Show winner and score
                 endGame()
                 return@addSnapshotListener
             }
