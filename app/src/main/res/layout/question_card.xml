@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvQuestionCard"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        app:cardElevation="-1dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="24dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#9D8B00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/wendy_one"
+        android:textSize="24sp"
+        android:padding="8dp"
+        android:gravity="center"
+        tools:text="Which element has 8 protons?"
+        app:layout_constraintStart_toStartOf="@id/cvQuestionCard"
+        app:layout_constraintBottom_toBottomOf="@id/cvQuestionCard"
+        app:layout_constraintEnd_toEndOf="@id/cvQuestionCard"
+        app:layout_constraintTop_toTopOf="@id/cvQuestionCard"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

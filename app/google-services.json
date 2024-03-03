@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259144757700",
+    "project_id": "eduswipe-adb12",
+    "storage_bucket": "eduswipe-adb12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259144757700:android:3b4d70cbfea0ff97c87491",
+        "android_client_info": {
+          "package_name": "com.example.eduswipe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMz0hwK6e45tZ6JOaF8cQc2XQC8asSCzw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

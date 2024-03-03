@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FFFCE5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBubble"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="63dp"
+        app:cardBackgroundColor="#1ACED8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/cvBubble"
+        app:layout_constraintTop_toTopOf="@id/cvBubble"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="-100dp"
+        android:layout_marginBottom="-140dp"
+        app:cardBackgroundColor="#70A5A8"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="400dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="-200dp"
+        app:cardBackgroundColor="#91E2E7"
+        app:cardCornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ibPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edu_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:text="EduSwipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#1ACED8"
+        android:textSize="64dp"
+        android:fontFamily="@font/wendy_one"
+        app:layout_constraintBottom_toTopOf="@id/ibPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

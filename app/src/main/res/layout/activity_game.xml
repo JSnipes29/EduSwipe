@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCE5"
+    android:fitsSystemWindows="true"
+    tools:context=".GameActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clGame"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFCE5">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTopAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:cardBackgroundColor="#F08F8F"
+        app:cardElevation="-1dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.example.loadinganimation.LoadingAnimation
+        android:id="@+id/loadingAnim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        app:barType="@drawable/bouncy_balls"
+        app:boldText="false"
+        app:enlarge="5"
+        app:textColor="?colorPrimary"
+        app:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvWait"
+        android:text="Waiting for another player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:fontFamily="@font/wendy_one"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTopAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/wendy_one"
+        android:text="Answer 1"
+        app:layout_constraintTop_toTopOf="@id/cvTopAnswer"
+        app:layout_constraintBottom_toBottomOf="@id/cvTopAnswer"
+        app:layout_constraintStart_toStartOf="@id/cvTopAnswer"
+        app:layout_constraintEnd_toEndOf="@id/cvTopAnswer"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBottomAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:cardBackgroundColor="#8FA4F0"
+        app:cardElevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/wendy_one"
+        android:textSize="48sp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="+10 points"/>
+
+    <TextView
+        android:id="@+id/tvSubmessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/wendy_one"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="The correct answer was Oxygen"/>
+
+    <TextView
+        android:id="@+id/tvBottomAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/wendy_one"
+        android:text="Answer 2"
+        app:layout_constraintTop_toTopOf="@id/cvBottomAnswer"
+        app:layout_constraintBottom_toBottomOf="@id/cvBottomAnswer"
+        app:layout_constraintStart_toStartOf="@id/cvBottomAnswer"
+        app:layout_constraintEnd_toEndOf="@id/cvBottomAnswer"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLeftAnswer"
+        android:layout_width="32dp"
+        android:layout_height="400dp"
+        app:cardBackgroundColor="#D18FF0"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLeftAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/wendy_one"
+        android:text="Answer 3"
+        android:rotation="-90"
+        app:layout_constraintTop_toTopOf="@id/cvLeftAnswer"
+        app:layout_constraintBottom_toBottomOf="@id/cvLeftAnswer"
+        app:layout_constraintStart_toStartOf="@id/cvLeftAnswer"
+        app:layout_constraintEnd_toEndOf="@id/cvLeftAnswer"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRightAnswer"
+        android:layout_width="32dp"
+        android:layout_height="400dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="#8FF093"
+        app:cardElevation="-1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvRightAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:fontFamily="@font/wendy_one"
+        android:text="Answer 4"
+        android:rotation="90"
+        app:layout_constraintTop_toTopOf="@id/cvRightAnswer"
+        app:layout_constraintBottom_toBottomOf="@id/cvRightAnswer"
+        app:layout_constraintStart_toStartOf="@id/cvRightAnswer"
+        app:layout_constraintEnd_toEndOf="@id/cvRightAnswer"/>
+
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/csvQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/question_card"
+        tools:itemCount="5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clEndGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvEndMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wendy_one"
+            android:textSize="64sp"
+            android:layout_marginTop="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="You won"/>
+
+        <TextView
+            android:id="@+id/tvBackMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wendy_one"
+            android:textSize="24sp"
+            android:layout_marginBottom="100dp"
+            android:text="Go back to play again!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wendy_one"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEndMessage"
+            />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="100pts"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wendy_one"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="@id/tvYou"
+            app:layout_constraintStart_toStartOf="@id/tvYou"
+            app:layout_constraintTop_toBottomOf="@id/tvYou"
+            />
+
+
+        <TextView
+            android:id="@+id/tvOpp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opponent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wendy_one"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEndMessage"
+            />
+
+        <TextView
+            android:id="@+id/tvScoreOpp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="100pts"
+            android:textColor="@color/black"
+            android:fontFamily="@font/wendy_one"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="@id/tvOpp"
+            app:layout_constraintStart_toStartOf="@id/tvOpp"
+            app:layout_constraintTop_toBottomOf="@id/tvOpp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
